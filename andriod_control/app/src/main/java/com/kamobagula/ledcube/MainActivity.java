@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Get the patterns from the server
     private static String patterns[] = {"Rain", "Hello", "Raining Up"};
 
     @Override
