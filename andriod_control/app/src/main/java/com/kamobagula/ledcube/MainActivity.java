@@ -1,28 +1,27 @@
 package com.kamobagula.ledcube;
 
-import android.content.Context;
+import android.app.Activity;
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+
+import layout.DlgPatternsFragment;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    // Get the patterns from the server
-    private static String patterns[] = {"Rain", "Hello", "Raining Up"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Add toolbar to view
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -45,11 +44,20 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.action_settings) {
 
+            // Open the Settings Window
             startActivity(new Intent(MainActivity.this, PrefsActivity.class));
 
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    // All the methods that are custom
+    public void openPatternsChoices(View view) {
+        // Show dialog
+        FragmentManager fm = getFragmentManager();
+        DialogFragment dlg = new DlgPatternsFragment();
+        dlg.show(fm, "patterns");
     }
 }

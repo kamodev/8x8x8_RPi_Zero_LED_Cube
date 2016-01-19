@@ -29,14 +29,20 @@
         android:text="Rotate through patterns"
         android:id="@+id/chkPatternRotate"
         android:checked="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/swPower"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="86dp" />
 
-    <ListView
-        android:id="@android:id/list"
-        android:choiceMode="singleChoice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"  />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Current Pattern"
+        android:id="@+id/btnChoosePattern"
+        android:layout_below="@+id/swPower"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp"
+        android:onClick="openPatternsChoices"/>
 
 </RelativeLayout>

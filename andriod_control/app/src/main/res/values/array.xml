@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- String Arrays -->
+    <string-array name="cube_patterns">
+        <item>Rain</item>
+        <item>Game Play</item>
+        <item>Side to Side</item>
+        <item>Up and Down</item>
+    </string-array>
+</resources>
