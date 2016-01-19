@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:key="serverip"
+                        android:title="Cube Server IP Address"
+                        android:summary="Please fill the IP Address for the cube on the network" />
+    <EditTextPreference android:key="serverport"
+                        android:title="Cube Server port"
+                        android:summary="This is the port to which the data will be present on" />
+
+</PreferenceScreen>
